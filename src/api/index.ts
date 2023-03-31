@@ -30,7 +30,7 @@ export function fetchChatAPIProcess<T = any>(
   const settingStore = useSettingStore()
 
   return post<T>({
-    url: '/chat-process',
+    url: '/api/api/chatProcess',
     data: { prompt: params.prompt, options: params.options, systemMessage: settingStore.systemMessage },
     signal: params.signal,
     onDownloadProgress: params.onDownloadProgress,
