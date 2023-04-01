@@ -80,9 +80,9 @@ watch(
           <List />
         </div>
         <div class="p-4">
-          <NButton block @click="show = true">
-            Prompt Store
-          </NButton>
+<!--          <NButton block @click="show = true">-->
+<!--            Prompt Store-->
+<!--          </NButton>-->
         </div>
       </main>
       <Footer />

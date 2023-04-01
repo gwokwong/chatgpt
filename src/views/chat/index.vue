@@ -156,7 +156,7 @@ async function onConversation() {
     await fetchChatAPIOnce()
   }
   catch (error: any) {
-    const errorMessage = error?.message ?? t('common.wrong')
+    // const errorMessage = error?.message ?? t('common.wrong')
 
     if (error.message === 'canceled') {
       updateChatSome(
@@ -177,7 +177,8 @@ async function onConversation() {
         +uuid,
         dataSources.value.length - 1,
         {
-          text: `${currentChat.text}\n[${errorMessage}]`,
+          // text: `${currentChat.text}\n[${errorMessage}]`,
+					text: `${currentChat.text}\n`,
           error: false,
           loading: false,
         },
@@ -185,19 +186,19 @@ async function onConversation() {
       return
     }
 
-    updateChat(
-      +uuid,
-      dataSources.value.length - 1,
-      {
-        dateTime: new Date().toLocaleString(),
-        text: errorMessage,
-        inversion: false,
-        error: true,
-        loading: false,
-        conversationOptions: null,
-        requestOptions: { prompt: message, options: { ...options } },
-      },
-    )
+    // updateChat(
+    //   +uuid,
+    //   dataSources.value.length - 1,
+    //   {
+    //     dateTime: new Date().toLocaleString(),
+    //     text: errorMessage,
+    //     inversion: false,
+    //     error: true,
+    //     loading: false,
+    //     conversationOptions: null,
+    //     requestOptions: { prompt: message, options: { ...options } },
+    //   },
+    // )
     scrollToBottomIfAtBottom()
   }
   finally {
@@ -294,21 +295,21 @@ async function onRegenerate(index: number) {
       return
     }
 
-    const errorMessage = error?.message ?? t('common.wrong')
+    // const errorMessage = error?.message ?? t('common.wrong')
 
-    updateChat(
-      +uuid,
-      index,
-      {
-        dateTime: new Date().toLocaleString(),
-        text: errorMessage,
-        inversion: false,
-        error: true,
-        loading: false,
-        conversationOptions: null,
-        requestOptions: { prompt: message, ...options },
-      },
-    )
+    // updateChat(
+    //   +uuid,
+    //   index,
+    //   {
+    //     dateTime: new Date().toLocaleString(),
+    //     text: errorMessage,
+    //     inversion: false,
+    //     error: true,
+    //     loading: false,
+    //     conversationOptions: null,
+    //     requestOptions: { prompt: message, ...options },
+    //   },
+    // )
   }
   finally {
     loading.value = false
