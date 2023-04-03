@@ -178,7 +178,7 @@ async function onConversation() {
         dataSources.value.length - 1,
         {
           // text: `${currentChat.text}\n[${errorMessage}]`,
-					text: `${currentChat.text}\n`,
+          text: `${currentChat.text}\n`,
           error: false,
           loading: false,
         },

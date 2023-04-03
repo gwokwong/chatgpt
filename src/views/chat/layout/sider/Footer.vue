@@ -1,6 +1,6 @@
 <script setup lang='ts'>
 import { defineAsyncComponent, ref } from 'vue'
-import { HoverButton, SvgIcon, UserAvatar } from '@/components/common'
+import { HoverButton, UserAvatar } from '@/components/common'
 
 const Setting = defineAsyncComponent(() => import('@/components/common/Setting/index.vue'))
 
@@ -15,7 +15,7 @@ const show = ref(false)
 
     <HoverButton @click="show = true">
       <span class="text-xl text-[#4f555e] dark:text-white">
-<!--        <SvgIcon icon="ri:settings-4-line" />-->
+        <!--        <SvgIcon icon="ri:settings-4-line" /> -->
       </span>
     </HoverButton>
 

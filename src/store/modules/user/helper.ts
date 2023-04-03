@@ -18,7 +18,7 @@ export function defaultSetting(): UserState {
       avatar: 'https://raw.githubusercontent.com/Chanzhaoyu/chatgpt-web/main/src/assets/avatar.jpg',
       name: '来宾用户',
       // description: 'Star on <a href="https://github.com/Chanzhaoyu/chatgpt-bot" class="text-blue-500" target="_blank" >Github</a>',
-			description: '限时免费，功能持续优化',
+      description: '限时免费，功能持续优化',
     },
   }
 }
